@@ -1,0 +1,250 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f1dc; /* slightly softer beige */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    max-width: 460px;
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px solid #4a2c2a;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.login-header {
+    background-color: #d1b46f; /* warmer gold */
+    padding: 35px 30px;
+    text-align: center;
+    border-bottom: 2px solid #4a2c2a;
+}
+
+.login-header h1 {
+    color: #4a2c2a;
+    font-size: 2.1em;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.login-header p {
+    color: #5a3a35;
+    font-size: 0.95em;
+    font-style: italic;
+}
+
+.login-body {
+    padding: 38px 30px;
+    background-color: #f6f4e8;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    color: #4a2c2a;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #d1b46f;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4a2c2a;
+    box-shadow: 0 0 0 2px rgba(74, 44, 42, 0.15);
+}
+
+.error-message {
+    background-color: #f9d9dc;
+    color: #7a1f28;
+    padding: 12px;
+    border: 1px solid #f3b8bf;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a2c2a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-login:hover {
+    background-color: #6b4423;
+    transform: translateY(-1px);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.login-footer {
+    background-color: #d1b46f;
+    padding: 18px;
+    text-align: center;
+    border-top: 2px solid #4a2c2a;
+}
+
+.login-footer p {
+    color: #4a2c2a;
+    margin-bottom: 6px;
+    font-size: 0.9em;
+}
+
+.login-footer a {
+    color: #4a2c2a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.back-link a {
+    color: #4a2c2a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, letter-spacing 0.2s ease;
+}
+
+.back-link a:hover {
+    color: #6b4423;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-header h1 {
+        font-size: 1.6em;
+    }
+
+    .coffee-icon {
+        font-size: 2.6em;
+    }
+
+    .login-body {
+        padding: 28px 20px;
+    }
+}
+
+/* Mobile First (Base styles go here) */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-container {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .login-header {
+        padding: 25px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 1.8em;
+    }
+
+    .login-body {
+        padding: 25px 20px;
+    }
+
+    .form-group input {
+        padding: 12px 14px;
+        font-size: 0.95em;
+    }
+
+    .btn-login {
+        padding: 14px;
+        font-size: 1em;
+    }
+
+    .login-footer {
+        padding: 15px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .login-container {
+        max-width: 500px;
+    }
+
+    .login-header h1 {
+        font-size: 2.2em;
+    }
+
+    .login-body {
+        padding: 35px 25px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .login-container {
+        max-width: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+        .login-container {
+        max-width: none;
+    }
+}
+
+/* Extra Large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+        .login-container {
+        max-width: none;
+    }
+}
+
